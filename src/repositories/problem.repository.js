@@ -10,7 +10,17 @@ class ProblemRepository {
       });
       return problem;
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      throw error;
+    }
+  }
+
+  async getAllProblems() {
+    try {
+      const problems = await Problem.find({});
+      return problems;
+    } catch (error) {
+      console.error(error);
       throw error;
     }
   }
