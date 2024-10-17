@@ -4,7 +4,7 @@ const { PORT } = require("./config/server.config");
 
 const apiRouter = require("./routes");
 
-const errorHandler = require("./utils/errorHandler");
+const { errorHandler } = require("./utils");
 const connectToDB = require("./config/db.config");
 
 const app = express();
